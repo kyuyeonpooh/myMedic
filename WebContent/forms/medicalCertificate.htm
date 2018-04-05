@@ -1,0 +1,321 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv=content-type>
+	<meta name=generator content="mshtml 8.00.6001.18852">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title> Confirmation Form of Medical Treatment </title>
+	<link rel="shortcut icon" href="http://www.3ksoftware.com/favicon.ico"/>
+	<link type="text/css" href="http://www.uccxml.com/xdrp/baseXML/lib/css/soaxml_common.css" rel="stylesheet"  media="screen"/>
+	<link type="text/css" href="http://www.uccxml.com/xdrp/baseXML/lib/css/uniform.default.css" rel="stylesheet" media="screen" />
+	<link type="text/css" href="http://www.uccxml.com/xdrp/baseXML/lib/css/jquery-ui.1.10.3.smoothness.css" rel="stylesheet" media="screen" />
+	<style>
+		form	{height:100%; overflow:auto;}
+		canvas	{height:inherit !important;}
+	</style>
+<style>
+
+body {background-color:#ffffff;}
+
+</style>
+
+	<script type="text/javascript" src="http://www.uccxml.com/xdrp/baseXML/lib/scripts/bxControl.js"></script>
+	<script type="text/javascript" src="http://www.uccxml.com/xdrp/baseXML/lib/scripts/bxCommon.js"></script>
+	<script type="text/javascript" src="http://www.uccxml.com/xdrp/baseXML/lib/scripts/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="http://www.uccxml.com/xdrp/baseXML/lib/scripts/jquery-ui.1.10.3.min.js"></script>
+	<script type="text/javascript" src="http://www.uccxml.com/xdrp/baseXML/lib/scripts/jquery.uniform.js"></script>
+	<script type="text/javascript" src="http://www.uccxml.com/xdrp/baseXML/lib/scripts/jquery.timepicker.js"></script>
+	<script type="text/javascript" src="http://www.uccxml.com/xdrp/baseXML/lib/scripts/jSignature.custom.js"></script>
+	<script type="text/javascript" charset="utf-8">
+		$(function(){
+			$("input, textarea, select, button").uniform();
+			$( "#datepicker_20180130_104219" ).datepicker({dateFormat: "yy-mm-dd", changeMonth:true, changeYear:true, yearRange:"1950:2050"});
+$( "#datepicker_20180130_104231" ).datepicker({dateFormat: "yy-mm-dd", changeMonth:true, changeYear:true, yearRange:"1950:2050"});
+$( "#datepicker_20180130_104603" ).datepicker({dateFormat: "yy-mm-dd", changeMonth:true, changeYear:true, yearRange:"1950:2050"});
+$( ".bxTimePicker" ).timepicker({ 'scrollDefaultNow': true });
+		});
+	</script>
+	<script type="text/javascript">
+		function basexml_checktype() {
+		}
+	</script>
+	<script type="text/javascript" src="http://www.uccxml.com/xdrp/baseXML/lib/scripts/bxFormForMongo.js"></script>
+</head>
+<body>
+<form name="medicalCertificate">
+	<textarea id="calXMLcontent" name="calXMLcontent" style="display:none"></textarea>
+	<textarea id="inXMLcontent" name="inXMLcontent" style="display:none"></textarea>
+	<textarea id="calTextcontent" name="calTextcontent" style="display:none"></textarea>
+	<textarea id="outXMLcontent" name="outXMLcontent" style="display:none"></textarea>
+	<textarea id="outXMLurl" name="outXMLurl" style="display:none"></textarea>
+	<input type="hidden" name="xmlFileLink" id="xmlFileLink" value=""/>
+	<input type="hidden" name="title" id="title" value="medicalCertificate"/>
+	<input type="hidden" name="savefilepath" value="">
+	<input type="hidden" name="imagesavepath" value="">
+	<input type="hidden" name="imagematchinfo" value="">
+	<input type="hidden" name="H_DownloadFilePath" value="">
+	<input type="hidden" name="DownloadFilePath" value="">
+	<input type="hidden" name="formCategory" value="3" />
+	<input type="hidden" name="H_root/contents/patientName" value=""/>
+<input type="hidden" name="H_root/contents/patientID" value=""/>
+<input type="hidden" name="H_root/contents/dateOfVisit" value=""/>
+<input type="hidden" name="H_root/contents/dateOfIlled" value=""/>
+<input type="hidden" name="H_root/contents/diagnosis/diagnosisName" value=""/>
+<input type="hidden" name="H_root/contents/diagnosis/diagnosisCheck" value=""/>
+<input type="hidden" name="H_root/contents/intDiseaseCode/codeCheck" value=""/>
+<input type="hidden" name="H_root/contents/intDiseaseCode/code" value=""/>
+<input type="hidden" name="H_root/contents/firstVIsitSymptom" value=""/>
+<input type="hidden" name="H_root/contents/diagnosisContents" value=""/>
+<input type="hidden" name="H_root/contents/therapeuticRemarks" value=""/>
+<input type="hidden" name="H_root/contents/publishedDate" value=""/>
+<input type="hidden" name="H_root/contents/addressOfHos" value=""/>
+<input type="hidden" name="H_root/contents/nameOfHos" value=""/>
+<input type="hidden" name="H_root/contents/liscenseNum" value=""/>
+<input type="hidden" name="H_root/contents/nameOfDoctor" value=""/>
+<P align=center>
+<TABLE style="HEIGHT: 475px; WIDTH: 876px; margin: auto;" borderColor=#c0c0c0 cellSpacing=0 cellPadding=3 border=5>
+<COLGROUP>
+<COL width=700>
+</COL>
+</COLGROUP>
+<TBODY>
+<TR>
+<TD style="VERTICAL-ALIGN: top">
+<P align=center>
+<SPAN style="FONT-SIZE: 22pt">진 료 확 인 서</SPAN>
+</P>
+<HR style="HEIGHT: 2px; WIDTH: 90%; BACKGROUND-COLOR: #c0c0c0">
+<P align=center>
+</P>
+<P align=center>
+<TABLE style="HEIGHT: 214px; WIDTH: 846px; TABLE-LAYOUT: fixed" borderColor=#404040 cellSpacing=0 cellPadding=3 border=1>
+<COLGROUP>
+<COL width=218>
+</COL>
+<COL width=218>
+</COL>
+<COL width=218>
+</COL>
+<COL>
+</COL>
+</COLGROUP>
+<TBODY>
+<TR>
+<TD colSpan=4>
+<P align=center>
+</P>
+</TD>
+</TR>
+<TR>
+<TD>
+<P align=center>환자의 성명
+</P>
+</TD>
+<TD>
+<P align=center>
+<INPUT name=root/contents/patientName>
+</P>
+</TD>
+<TD>
+<P align=center>주민등록번호
+</P>
+</TD>
+<TD>
+<P align=center>
+<INPUT name=root/contents/patientID>
+</P>
+</TD>
+</TR>
+<TR>
+<TD>
+<P align=center>초 진 일 자
+</P>
+</TD>
+<TD>
+<P align=center>
+<INPUT id=datepicker_20180130_104219 style="WIDTH: 100px" name=root/contents/dateOfVisit>
+</P>
+</TD>
+<TD>
+<P align=center>발병일(사고일)
+</P>
+</TD>
+<TD>
+<P align=center>
+<INPUT id=datepicker_20180130_104231 style="WIDTH: 100px" name=root/contents/dateOfIlled>
+</P>
+</TD>
+</TR>
+<TR>
+<TD>
+<P align=center>진단명
+</P>
+<P align=center>
+<INPUT type=checkbox value=임상진단 name=root/contents/diagnosis/diagnosisCheck>임상적진단
+<INPUT type=checkbox value=최종진단 name=root/contents/diagnosis/diagnosisCheck>최종진단
+</P>
+</TD>
+<TD>
+<P align=center>
+<INPUT name=root/contents/diagnosis/diagnosisName>
+</P>
+</TD>
+<TD>
+<P align=center>국제질병분류번호
+</P>
+</TD>
+<TD>
+<P align=left>
+<SELECT name=root/contents/intDiseaseCode/codeCheck>
+<OPTION value=yes>check
+</OPTION>
+<OPTION selected value=no>null
+</OPTION>
+</SELECT> :
+<INPUT style="HEIGHT: 22px; WIDTH: 84px" size=1 name=root/contents/intDiseaseCode/code>
+</P>
+</TD>
+</TR>
+<TR>
+<TD>
+<P align=center>초진시 증상
+</P>
+</TD>
+<TD colSpan=3>
+<P align=left>
+<TEXTAREA style="HEIGHT: 76px; WIDTH: 606px" rows=1 cols=12 name=root/contents/firstVIsitSymptom>
+</TEXTAREA>&nbsp;
+</P>
+</TD>
+</TR>
+<TR>
+<TD>
+<P align=center>진 단 내 용
+</P>
+</TD>
+<TD colSpan=3>
+<P align=left>
+<TEXTAREA style="HEIGHT: 91px; WIDTH: 606px" rows=1 cols=30 name=root/contents/diagnosisContents>
+</TEXTAREA>&nbsp;
+</P>
+</TD>
+</TR>
+<TR>
+<TD>
+<P align=center>치 료 소 견
+</P>
+</TD>
+<TD colSpan=3>
+<P align=left>
+<TEXTAREA style="HEIGHT: 100px; WIDTH: 605px" rows=1 cols=23 name=root/contents/therapeuticRemarks>
+</TEXTAREA>&nbsp;
+</P>
+</TD>
+</TR>
+<TR>
+<TD colSpan=4>
+<P align=center>상기 기재한 내용은 환자의 진료기록부의 의한 것임.
+</P>
+<P align=center>발 행 일 :
+<INPUT id=datepicker_20180130_104603 style="WIDTH: 100px" name=root/contents/publishedDate>
+</P>
+<P align=center>
+</P>
+</TD>
+</TR>
+<TR>
+<TD>
+<P align=center>병 원 주 소
+</P>
+</TD>
+<TD>
+<P align=center>
+<INPUT style="HEIGHT: 22px; WIDTH: 195px" size=18 name=root/contents/addressOfHos>
+</P>
+</TD>
+<TD>
+<P align=center>병 원 명
+</P>
+</TD>
+<TD>
+<P align=center>
+<INPUT name=root/contents/nameOfHos>
+</P>
+</TD>
+</TR>
+<TR>
+<TD>
+<P align=center>면 허 번 호
+</P>
+</TD>
+<TD>
+<P align=center>
+<INPUT style="HEIGHT: 22px; WIDTH: 194px" size=19 name=root/contents/liscenseNum>
+</P>
+</TD>
+<TD>
+<P align=center>의 사 성 명
+</P>
+</TD>
+<TD>
+<P align=center>
+<INPUT style="HEIGHT: 22px; WIDTH: 151px" size=16 name=root/contents/nameOfDoctor>
+</P>
+</TD>
+</TR>
+</TBODY>
+</TABLE>
+
+</TD>
+</TR>
+</TBODY>
+</TABLE>
+
+<script src="../public/js/web3.js"></script>
+<script src="../public/js/web3.jb.js"></script>
+<br>
+<table id="last-table" style="margin: auto;">
+	  <tr>
+	    <td style="text-align: center; margin: 5px;">의사  계좌</td>
+	    <td>
+	      <input type="text" id="account" size="50" placeholder="의사의 계좌를 입력하시오"/>
+	    </td>
+	  </tr>
+	  <tr>
+	  	<td style="text-align: center; margin: 5px;">의사 인증키</td>
+	    <td>
+	      <input type="password" id="passphrase" size="25" placeholder="의사의 인증키를 입력하시오"/>
+	    </td>  	
+	  </tr>
+	  <tr>
+	    <td style="text-align: center; margin: 5px;">환자 계좌</td>
+	    <td>
+	      <input type="text" id="accountPatient" size="50" placeholder="환자의 계좌를 입력하시오"/>
+	    </td>
+	  </tr>
+</table><br>
+<p style="text-align: center;"><input type="button" value="발급하기" onclick="javascript:saveSoaxml();"/> &#160;</p>
+
+</form>
+<script type="text/javascript" src="http://www.uccxml.com/xdrp/sys/lib/bxComponent/tinymce/js/tinymce/tinymce.min.js"></script>
+<script type="text/javascript" src="http://www.uccxml.com/xdrp/sys/lib/bxComponent/bxComponent.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		loaded();
+	});
+</script>
+<script LANGUAGE="JavaScript" FOR="XMLfile" EVENT="XMLdown(lFile)">
+	if(lFile != "" ) {
+		document.forms[0].outXMLcontent.value=lFile;
+		document.title=lFile;
+	}
+</script>
+<script LANGUAGE="JScript" FOR="XMLfile" EVENT="XMLupdate(lFile)">
+	if(lFile != "" ) {
+		bxfXmlDisplay(lFile);
+	}
+</script>
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8"/>
+		<title>Smart List for Doctors</title>
+		<link type="text/css" href="http://www.uccxml.com/xdrp/baseXML/lib/css/jquery-ui.1.10.3.smoothness.css" rel="stylesheet" media="screen" />
+		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+		<script src="http://www.uccxml.com/xdrp/baseXML/lib/scripts/jquery-ui.1.10.3.min.js"></script>
+		<script src="./public/js/web3.js"></script>
+		<script src="./public/js/web3.jb.js"></script>
+		<style>
+			input[type="password"] {
+	    		font-family: caption;
+			}
+			td {
+				width: auto;
+				text-align: center;
+			}
+			table {
+				margin-left: auto;
+				margin-right: auto;
+			}
+		</style>
+    <script>
+			
+			function showContracts(formCategory){
+				var i = 0;
+				jb.unlockAccount($('#account').val(), $('#passphrase').val(), function(error) {
+					if(error == 'fail auth') {
+						alert('Sorry, we do not recognize this number.');
+					} else if(error) {
+						throw error;
+					} else {
+						$('table').children().remove();
+						var th = '<tr>';
+						th += '<td> No.  </td>';
+						th += '<td> Sort  </td>';
+						th += '<td> Patient </td>';
+						th += '<td> XML </td>';
+						th += '<td> Hash </td>';
+						$('table').append(th);
+						if(formCategory == -1){
+							jb.contract.sendAllContracts({from: $('#account').val()}).forEach(function(currentValue) {
+								if(currentValue == "0x0000000000000000000000000000000000000000000000000000000000000000"){
+									console.log("true");
+									return;
+								}
+								var contract = jb.contract.getContract(currentValue);
+								var tr = '<tr>';
+								tr += '<td>' + (++i) + '</td>';
+								switch(parseInt(contract[2])){
+									case 0:
+										tr += '<td> General </td>';
+										break;
+									case 1:
+										tr += '<td> injury </td>';
+										break;
+									case 2:
+										tr += '<td> prescription </td>';
+										break;
+									case 3:
+										tr += '<td> confirmation </td>';
+										break;
+								}
+								tr += '<td>' + contract[1]  + '</td>';
+								tr += '<td><a target="_blank" href="./xml/' + contract[3] + '">' + contract[3]  + '</a></td>';
+								tr += '<td>' + contract[4].substring(0, 24)  + '..... </td>';
+								tr += '</tr>';
+								$('tbody').append(tr);													
+							});
+						}
+						jb.contract.sendContracts(formCategory, {from: $('#account').val()}).forEach(function(currentValue) {
+							if(currentValue == "0x0000000000000000000000000000000000000000000000000000000000000000"){
+								console.log("true");
+								return;
+							}
+							var contract = jb.contract.getContract(currentValue);
+							var tr = '<tr>';
+							tr += '<td>' + (++i) + '</td>';
+							switch(formCategory){
+								case 0:
+									tr += '<td> General </td>';
+									break;
+								case 1:
+									tr += '<td> Injury </td>';
+									break;
+								case 2:
+									tr += '<td> Prescription </td>';
+									break;
+								case 3:
+									tr += '<td> Confirmation </td>';
+									break;
+							}
+							tr += '<td>' + contract[1]  + '</td>';
+							tr += '<td><a target="_blank" href="./xml/' + contract[3] + '">' + contract[3]  + '</a></td>';
+							tr += '<td>' + contract[4].substring(0, 24)  + '..... </td>';
+							tr += '</tr>';
+							$('tbody').append(tr);													
+						});
+					}
+				});
+			}
+		
+
+	</script>
+
+    <title>myMedic</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    <link href="carousel.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/hiun/NanumSquare/master/nanumsquare.css">
+    
+  </head>
+  <body>
+
+    <header>
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">        
+        <a class="navbar-brand" href="./index2.html">
+            <img src="./imgSrc/homeicon.jpg" width="36" height="36">       
+            <strong>myMedic</strong>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="./contractListen.html">Doctors<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./contractListen1.html">Patients</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main role="main">
+		    <div class="fluid">
+   	        <div class="row" style="margin:auto;">
+                  <form style="margin:auto;">
+                     <div class="container" style="padding: 30px 0px 10px 0px;" >
+                     <label>Account</label>
+                     <input class="form-control" type="text" id="account" placeholder="Enter your account"
+                     		style= "margin-bottom: 10px;">
+                     <label>Confirmation Key</label>
+                     <input class="form-control" type="password" id="passphrase" placeholder="Enter your identificaiton number"/>
+                     </div>
+                     <div class="container" style="padding: 10px 0px 5px 0px;">
+                     	<a href="#" onclick="showContracts(0);" class="btn btn-info btn-md">General</a>
+                     	<a href="#" onclick="showContracts(1);" class="btn btn-info btn-md">Injury</a>
+                     	<a href="#" onclick="showContracts(2);" class="btn btn-info btn-md">Prescription</a>
+                     	<a href="#" onclick="showContracts(3);" class="btn btn-info btn-md">Confirmation</a>
+                     </div>
+                     <div class="container" style="padding: 5px 0px 30px 0px;">
+                     	<a href="#" onclick="showContracts(-1);" class="btn btn-primary btn-block">Check all documents</a>
+                     </div>
+                     
+                  </form>
+            </div>
+            <div class="container"><table class="table"></table></div>              
+         </div>
+    </main>
+   
+
+    <!-- Bootstrap core JavaScript ================================================== -->
+ 
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- Placed at the end of the document so the pages load faster -->
+  </body>
+</html>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="../forms/mediCert.xsl"?>
+<root xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="bx_Dublin.xsd" >
+      <sicknessRecordNumber>H_root/sicknessRecordNumber</sicknessRecordNumber>
+      <number>H_root/number</number>
+      <personal>
+         <regiNum>H_root/personal/regiNum</regiNum>
+         <name>H_root/personal/name</name>
+         <gender>H_root/personal/gender</gender>
+         <birthday>H_root/personal/birthday</birthday>
+         <age>H_root/personal/age</age>
+         <address>H_root/personal/address</address>
+         <telNumber>H_root/personal/telNumber</telNumber>
+      </personal>
+      <disease>
+         <class>H_root/disease/class</class>
+         <diseaseNumber>H_root/disease/diseaseNumber</diseaseNumber>
+         <diseaseName>H_root/disease/diseaseName</diseaseName>
+      </disease>
+      <date>
+         <diseaseDate>H_root/date/diseaseDate</diseaseDate>
+         <diagnosisDate>H_root/date/diagnosisDate</diagnosisDate>
+         <pubDate>H_root/date/pubDate</pubDate>
+      </date>
+      <remark>H_root/remark</remark>
+      <usage>H_root/usage</usage>
+      <hospital>
+         <hospitalName>H_root/hospital/hospitalName</hospitalName>
+         <hospitalAddress>H_root/hospital/hospitalAddress</hospitalAddress>
+         <hospitalTel>H_root/hospital/hospitalTel</hospitalTel>
+      </hospital>
+      <doctor>
+         <doctorName>H_root/doctor/doctorName</doctorName>
+         <doctorOpinion>H_root/doctor/doctorOpinion</doctorOpinion>
+         <doctorLisenceNum>H_root/doctor/doctorLisenceNum</doctorLisenceNum>
+      </doctor>
+   </root>

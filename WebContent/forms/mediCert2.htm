@@ -1,0 +1,455 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv=content-type>
+	<meta name=generator content="mshtml 8.00.6001.18852">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title> Medical Certificate </title>
+	<link rel="shortcut icon" href="http://www.3ksoftware.com/favicon.ico"/>
+	<link type="text/css" href="http://www.uccxml.com/xdrp/baseXML/lib/css/soaxml_common.css" rel="stylesheet"  media="screen"/>
+	<link type="text/css" href="http://www.uccxml.com/xdrp/baseXML/lib/css/uniform.default.css" rel="stylesheet" media="screen" />
+	<link type="text/css" href="http://www.uccxml.com/xdrp/baseXML/lib/css/jquery-ui.1.10.3.smoothness.css" rel="stylesheet" media="screen" />
+	<style>
+		form	{height:100%; overflow:auto;}
+		canvas	{height:inherit !important;}
+	</style>
+	<script type="text/javascript" src="http://www.uccxml.com/xdrp/baseXML/lib/scripts/bxControl.js"></script>
+	<script type="text/javascript" src="http://www.uccxml.com/xdrp/baseXML/lib/scripts/bxCommon.js"></script>
+	<script type="text/javascript" src="http://www.uccxml.com/xdrp/baseXML/lib/scripts/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="http://www.uccxml.com/xdrp/baseXML/lib/scripts/jquery-ui.1.10.3.min.js"></script>
+	<script type="text/javascript" src="http://www.uccxml.com/xdrp/baseXML/lib/scripts/jquery.uniform.js"></script>
+	<script type="text/javascript" src="http://www.uccxml.com/xdrp/baseXML/lib/scripts/jquery.timepicker.js"></script>
+	<script type="text/javascript" src="http://www.uccxml.com/xdrp/baseXML/lib/scripts/jSignature.custom.js"></script>
+	<script type="text/javascript" charset="utf-8">
+		$(function(){
+			$("input, textarea, select, button").uniform();
+			$( "#datepicker_20180125_162824" ).datepicker({dateFormat: "yy-mm-dd", changeMonth:true, changeYear:true, yearRange:"1950:2050"});
+$( "#datepicker_20180125_163503" ).datepicker({dateFormat: "yy-mm-dd", changeMonth:true, changeYear:true, yearRange:"1950:2050"});
+$( "#datepicker_20180125_163523" ).datepicker({dateFormat: "yy-mm-dd", changeMonth:true, changeYear:true, yearRange:"1950:2050"});
+$( "#datepicker_20180125_163714" ).datepicker({dateFormat: "yy-mm-dd", changeMonth:true, changeYear:true, yearRange:"1950:2050"});
+$( ".bxTimePicker" ).timepicker({ 'scrollDefaultNow': true });
+		});
+	</script>
+	<script type="text/javascript">
+		function basexml_checktype() {
+			bxfSetValRadioBtn("root/personal/gender",'<xsl:value-of select="root/personal/gender"/>');
+bxfSetValRadioBtn("root/disease/class",'<xsl:value-of select="root/disease/class"/>');
+		}
+	</script>
+	<script type="text/javascript" src="http://www.uccxml.com/xdrp/baseXML/lib/scripts/bxFormForMongo.js"></script>
+</head>
+<body>
+<form name="mediCert">
+	<textarea id="calXMLcontent" name="calXMLcontent" style="display:none"></textarea>
+	<textarea id="inXMLcontent" name="inXMLcontent" style="display:none"></textarea>
+	<textarea id="calTextcontent" name="calTextcontent" style="display:none"></textarea>
+	<textarea id="outXMLcontent" name="outXMLcontent" style="display:none"></textarea>
+	<textarea id="outXMLurl" name="outXMLurl" style="display:none"></textarea>
+	<input type="hidden" name="xmlFileLink" id="xmlFileLink" value=""/>
+	<input type="hidden" name="title" id="title" value="mediCert"/>
+	<input type="hidden" name="savefilepath" value="">
+	<input type="hidden" name="imagesavepath" value="">
+	<input type="hidden" name="imagematchinfo" value="">
+	<input type="hidden" name="H_DownloadFilePath" value="">
+	<input type="hidden" name="DownloadFilePath" value="">
+	<input type="hidden" name="formCategory" value="0">
+	<input type="hidden" name="H_root/sicknessRecordNumber" value=""/>
+	<input type="hidden" name="H_root/number" value=""/>
+	<input type="hidden" name="H_root/personal/regiNum" value=""/>
+	<input type="hidden" name="H_root/personal/name" value=""/>
+	<input type="hidden" name="H_root/personal/gender" value=""/>
+	<input type="hidden" name="H_root/personal/birthday" value=""/>
+	<input type="hidden" name="H_root/personal/age" value=""/>
+	<input type="hidden" name="H_root/personal/address" value=""/>
+	<input type="hidden" name="H_root/disease/class" value=""/>
+	<input type="hidden" name="H_root/disease/diseaseName" value=""/>
+	<input type="hidden" name="H_root/disease/diseaseNumber" value=""/>
+	<input type="hidden" name="H_root/date/diseaseDate" value=""/>
+	<input type="hidden" name="H_root/date/diagnosisDate" value=""/>
+	<input type="hidden" name="H_root/date/pubDate" value=""/>
+	<input type="hidden" name="H_root/remark" value=""/>
+	<input type="hidden" name="H_root/usage" value=""/>
+	<input type="hidden" name="H_root/doctor/doctorOpinion" value=""/>
+	<input type="hidden" name="H_root/hospital/hospitalName" value=""/>
+	<input type="hidden" name="H_root/hospital/hospitalAddress" value=""/>
+	<input type="hidden" name="H_root/hospital/hospitalTel" value=""/>
+	<input type="hidden" name="H_root/doctor/doctorName" value=""/>
+	<input type="hidden" name="H_root/doctor/doctorLisenceNum" value=""/>
+	<input type="hidden" name="H_root/personal/telNumber" value=""/>
+<P>
+<TABLE style="HEIGHT: 909px; WIDTH: 843px; margin: auto;" borderColor=#000000 cellSpacing=0 cellPadding=3 border=1>
+<COLGROUP>
+<COL width=100>
+</COL>
+<COL width=60>
+</COL>
+<COL width=60>
+</COL>
+<COL width=40>
+</COL>
+<COL width=60>
+</COL>
+<COL width=40>
+</COL>
+<COL width=20>
+</COL>
+<COL width=100>
+</COL>
+<COL width=40>
+</COL>
+<COL width=40>
+</COL>
+<COL width=20>
+</COL>
+<COL width=60>
+</COL>
+</COLGROUP>
+<TBODY>
+<TR>
+<TD colSpan=12>
+<P align=center>
+<SPAN style="FONT-SIZE: 20pt">
+<STRONG>Medical Certificate
+</STRONG>
+</SPAN>
+</P>
+</TD>
+</TR>
+<TR>
+<TD colSpan=2>
+<P>Identification No.<br/>
+<div style="text-align: center;"><INPUT style="HEIGHT: 22px; WIDTH: 156px" size=1 name=root/sicknessRecordNumber></div>
+</P>
+</TD>
+<TD colSpan=4>
+<P>Year No.<br/>
+<div style="text-align: center;"><INPUT style="HEIGHT: 22px; WIDTH: 175px" size=1 name=root/number></div>
+</P>
+</TD>
+<TD colSpan=6>
+<P>Resident Registration No.<br/>
+<div style="text-align: center;"></span><INPUT style="HEIGHT: 22px; WIDTH: 156px" size=1 name=root/personal/regiNum></div>
+</P>
+</TD>
+</TR>
+<TR>
+<TD>
+<P align=center>Patient's name
+</P>
+</TD>
+<TD colSpan=2>
+<P align=center>
+<INPUT name=root/personal/name>
+</P>
+</TD>
+<TD>
+<P align=center>Sex
+</P>
+</TD>
+<TD>
+<P align=center>
+<INPUT type=radio value=male name=root/personal/gender>M<br/>
+<INPUT type=radio value=female name=root/personal/gender>F
+</P>
+</TD>
+<TD colSpan=2>
+<P align=center>Birth
+</P>
+<P align=center>
+</P>
+</TD>
+<TD colSpan=3>
+<P align=center>
+<INPUT id=datepicker_20180125_162824 style="WIDTH: 100px" name=root/personal/birthday>
+</P>
+</TD>
+<TD>
+<P>  Age
+</P>
+<P>
+</P>
+</TD>
+<TD>
+<P>
+<INPUT style="HEIGHT: 22px; WIDTH: 18px" size=18 name=root/personal/age>
+</P>
+</TD>
+</TR>
+<TR>
+<TD>
+<P align=center>Patient's Tel
+</P>
+</TD>
+<TD colSpan=11 align=center>
+<INPUT style="HEIGHT: 22px; WIDTH: 235px" size=18 name=root/personal/telNumber>
+</TD>
+</TR>
+<TR>
+<TD>
+<P align=center>Patient's Address
+</P>
+</TD>
+<TD colSpan=11>
+<P align=center>
+<INPUT style="HEIGHT: 22px; WIDTH: 475px" size=30 name=root/personal/address>
+</P>
+</TD>
+</TR>
+<TR>
+<TD>
+<P align=center>&nbsp;name of disease 
+</P>
+<P align=center>
+</P>
+<P align=center>
+<INPUT type=radio value=speculation name=root/disease/class>Clinical 
+</P>
+<P align=center>
+</P>
+<P align=center>
+<INPUT type=radio value=final name=root/disease/class>Final   
+</P>
+</TD>
+<TD colSpan=8>
+<P align=center>
+<INPUT style="HEIGHT: 22px; WIDTH: 454px" size=1 name=root/disease/diseaseName>
+</P>
+</TD>
+<TD colSpan=3>
+<P align=center>Disease
+</P>
+<P align=center>No.sort
+</P>
+<P align=center>
+</P>
+<P align=center>
+<INPUT style="HEIGHT: 22px; WIDTH: 87px" size=3 name=root/disease/diseaseNumber>
+</P>
+<P align=center>
+</P>
+<P align=center>
+</P>
+<P align=center>
+</P>
+</TD>
+</TR>
+<TR>
+<TD>
+<P align=center>Occur date
+</P>
+</TD>
+<TD colSpan=3>
+<P align=center>
+<INPUT id=datepicker_20180125_163503 style="HEIGHT: 22px; WIDTH: 147px" size=21 name=root/date/diseaseDate>&nbsp;
+</P>
+</TD>
+<TD colSpan=2>
+<P align=center>Diagnosis date
+</P>
+</TD>
+<TD colSpan=6>
+<P align=center>
+<INPUT id=datepicker_20180125_163523 style="HEIGHT: 22px; WIDTH: 153px" size=25 name=root/date/diagnosisDate>&nbsp;
+</P>
+</TD>
+</TR>
+<TR>
+<TD>
+<P align=center>Henceforward
+</P>
+<P align=center>treatment
+</P>
+<P align=center>opinion
+</P>
+</TD>
+<TD colSpan=11>
+<P align=center>
+<TEXTAREA style="HEIGHT: 55px; WIDTH: 556px" rows=1 cols=1 name=root/doctor/doctorOpinion>
+</TEXTAREA>
+</P>
+</TD>
+</TR>
+<TR>
+<TD>
+<P align=center>Note
+</P>
+</TD>
+<TD colSpan=4>
+<P align=center>
+<INPUT name=root/remark>
+</P>
+</TD>
+<TD colSpan=3>
+<P align=center>Purpose
+</P>
+</TD>
+<TD colSpan=4>
+<P align=center>
+<INPUT name=root/usage>
+</P>
+</TD>
+</TR>
+<TR>
+<TD colSpan=12>
+<P align=center>
+<STRONG>
+</STRONG>
+</P>
+<P align=center>
+<STRONG>Diagnosed as above
+</STRONG>
+</P>
+<P align=center>
+<STRONG>
+</STRONG>
+</P>
+<P align=center>
+<TABLE style="WIDTH: 700px; margin: auto;" borderColor=#000000 cellSpacing=0 cellPadding=3 border=1>
+<COLGROUP>
+<COL width=200>
+</COL>
+<COL width=200>
+</COL>
+<COL width=100>
+</COL>
+<COL width=100>
+</COL>
+</COLGROUP>
+<TBODY>
+<TR>
+<TD>
+<P align=center>
+<STRONG>Date of Issue
+</STRONG>
+</P>
+</TD>
+<TD colSpan=3>
+<P align=left>&nbsp;
+<INPUT id=datepicker_20180125_163714 style="HEIGHT: 22px; WIDTH: 220px" size=31 name=root/date/pubDate>
+</P>
+</TD>
+</TR>
+<TR>
+<TD>
+<P align=center>
+<STRONG>Name of the Medical Institution
+</STRONG>
+</P>
+</TD>
+<TD colSpan=3>
+<P>&nbsp;
+<INPUT style="HEIGHT: 22px; WIDTH: 318px" size=39 name=root/hospital/hospitalName>
+</P>
+</TD>
+</TR>
+<TR>
+<TD>
+<P align=center>
+<STRONG>Address
+</STRONG>
+</P>
+</TD>
+<TD colSpan=3>
+<P>&nbsp;
+<INPUT style="HEIGHT: 22px; WIDTH: 431px" size=37 name=root/hospital/hospitalAddress>
+</P>
+</TD>
+</TR>
+<TR>
+<TD>
+<P align=center>
+<STRONG>Telephone & Fax
+</STRONG>&nbsp;&nbsp;
+</P>
+</TD>
+<TD colSpan=3>
+<P>&nbsp;
+<INPUT style="HEIGHT: 22px; WIDTH: 251px" size=29 name=root/hospital/hospitalTel>
+</P>
+</TD>
+</TR>
+<TR>
+<TD>
+<P align=center>
+<STRONG>License Number
+</STRONG>&nbsp;&nbsp;
+</P>
+</TD>
+<TD>
+<P align=center>NO.
+<INPUT style="HEIGHT: 22px; WIDTH: 81px" size=1 name=root/doctor/doctorLisenceNum>
+</P>
+</TD>
+<TD>Doctor's Name
+</TD>
+<TD>
+<P>
+</P>
+<P>
+&nbsp;<INPUT style="HEIGHT: 17px; WIDTH: 113px" size=1 name=root/doctor/doctorName>
+</P>
+<P>
+</P>
+</TD>
+</TR>
+</TBODY>
+</TABLE>
+</P>
+<STRONG>
+</STRONG>
+<P align=center>
+</P>
+</TD>
+</TR>
+</TBODY>
+</TABLE>
+</P>
+
+<br>
+<table id="last-table" style="margin: auto;">
+	  <tr>
+	    <td style="text-align: center; margin: 5px;">Doctor's Account</td>
+	    <td>
+	      <input type="text" id="account" size="50" placeholder="Enter doctor's account"/>
+	    </td>
+	  </tr>
+	  <tr>
+	  	<td style="text-align: center; margin: 5px;">Doctor confirmation key</td>
+	    <td>
+	      <input type="password" id="passphrase" size="25" placeholder="Enter the doctor's key"/>
+	    </td>  	
+	  </tr>
+	  <tr>
+	    <td style="text-align: center; margin: 5px;">Patient's Account</td>
+	    <td>
+	      <input type="text" id="accountPatient" size="50" placeholder="Enter the Patient's account"/>
+	    </td>
+	  </tr>
+</table><br>
+<p style="text-align: center;"><input type="button" value="발급하기" onclick="javascript:saveSoaxml();"/> &#160;</p>
+</form>
+
+<script type="text/javascript" src="http://www.uccxml.com/xdrp/sys/lib/bxComponent/tinymce/js/tinymce/tinymce.min.js"></script>
+<script type="text/javascript" src="http://www.uccxml.com/xdrp/sys/lib/bxComponent/bxComponent.js"></script>
+<script src="../public/js/web3.js"></script>
+<script src="../public/js/web3.jb.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		loaded();
+	});
+</script>
+<script LANGUAGE="JavaScript" FOR="XMLfile" EVENT="XMLdown(lFile)">
+	if(lFile != "" ) {
+		document.forms[0].outXMLcontent.value=lFile;
+		document.title=lFile;
+	}
+</script>
+<script LANGUAGE="JScript" FOR="XMLfile" EVENT="XMLupdate(lFile)">
+	if(lFile != "" ) {
+		bxfXmlDisplay(lFile);
+	}
+</script>
+</body>
+</html>

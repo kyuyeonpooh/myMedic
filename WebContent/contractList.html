@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>Smart Contract List</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+		<link type="text/css" href="http://www.uccxml.com/xdrp/baseXML/lib/css/jquery-ui.1.10.3.smoothness.css" rel="stylesheet" media="screen" />
+		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+		<script src="http://www.uccxml.com/xdrp/baseXML/lib/scripts/jquery-ui.1.10.3.min.js"></script>
+		<script src="./public/js/web3.js"></script>
+		<script src="./public/js/web3.jb.js"></script>
+		<script>
+			
+			function showContracts(formCategory){
+				jb.unlockAccount($('#account').val(), $('#passphrase').val(), function(error) {
+					if(error == 'fail auth') {
+						alert('인증정보가 올바르지 않습니다.');
+					} else if(error) {
+						throw error;
+					} else {
+						$('tbody').children().remove();
+						jb.contract.sendContracts(formCategory, {from: $('#account').val()}).forEach(function(currentValue) {
+								var contract = jb.contract.getContract(currentValue);
+								alert(contract[3]);
+								if(contract[3] != undefined){
+									var tr = '<tr>';
+									tr += '<td>' + contract[0]  + '</td>'
+									tr += '<td><a target="_blank" href="./xml/' + contract[1] + '">' + contract[3]  + '</a></td>'
+									tr += '<td>' + contract[4]  + '</td>'
+									tr += '</tr>';
+									$('tbody').append(tr);
+							}
+						});
+					}
+				});
+			}
+		
+
+		</script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="fluid">
+				<div class="row">
+					<div class="col-md-4">
+						<form>
+							<label>Account</label>
+							<input class="form-control" type="text" id="account" placeholder="account"/>
+							<label>Passphrase</label>
+							<input class="form-control" type="password" id="passphrase" placeholder="passphrase"/>
+							<button class="btn btn-success btn-sm pull-right" type="button" onclick="showContracts(0);")>Get Contracts</button>
+						</form>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<table class="table">
+							<thead>
+								<tr>
+									<td>issuer</td>
+									<td>XML</td>
+									<td>Hash</td>
+								</tr>
+							</thead>
+							<tbody>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

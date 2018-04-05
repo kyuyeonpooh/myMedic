@@ -1,0 +1,568 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv=content-type>
+	<meta name=generator content="mshtml 8.00.6001.18852">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title> Medical Certificate of Injury </title>
+	<link rel="shortcut icon" href="http://www.3ksoftware.com/favicon.ico"/>
+	<link type="text/css" href="http://www.uccxml.com/xdrp/baseXML/lib/css/soaxml_common.css" rel="stylesheet"  media="screen"/>
+	<link type="text/css" href="http://www.uccxml.com/xdrp/baseXML/lib/css/uniform.default.css" rel="stylesheet" media="screen" />
+	<link type="text/css" href="http://www.uccxml.com/xdrp/baseXML/lib/css/jquery-ui.1.10.3.smoothness.css" rel="stylesheet" media="screen" />
+	<style>
+		form	{height:100%; overflow:auto;}
+		canvas	{height:inherit !important;}	
+	</style>
+	<script type="text/javascript" src="http://www.uccxml.com/xdrp/baseXML/lib/scripts/bxControl.js"></script>
+	<script type="text/javascript" src="http://www.uccxml.com/xdrp/baseXML/lib/scripts/bxCommon.js"></script>
+	<script type="text/javascript" src="http://www.uccxml.com/xdrp/baseXML/lib/scripts/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="http://www.uccxml.com/xdrp/baseXML/lib/scripts/jquery-ui.1.10.3.min.js"></script>
+	<script type="text/javascript" src="http://www.uccxml.com/xdrp/baseXML/lib/scripts/jquery.uniform.js"></script>
+	<script type="text/javascript" src="http://www.uccxml.com/xdrp/baseXML/lib/scripts/jquery.timepicker.js"></script>
+	<script type="text/javascript" src="http://www.uccxml.com/xdrp/baseXML/lib/scripts/jSignature.custom.js"></script>
+	<script type="text/javascript" charset="utf-8">
+		$(function(){
+			$("input, textarea, select, button").uniform();
+			$( "#datepicker_20180130_112657" ).datepicker({dateFormat: "yy-mm-dd", changeMonth:true, changeYear:true, yearRange:"1950:2050"});
+$( "#datepicker_20180130_114005" ).datepicker({dateFormat: "yy-mm-dd", changeMonth:true, changeYear:true, yearRange:"1950:2050"});
+$( "#datepicker_20180130_114702" ).datepicker({dateFormat: "yy-mm-dd", changeMonth:true, changeYear:true, yearRange:"1950:2050"});
+$( ".bxTimePicker" ).timepicker({ 'scrollDefaultNow': true });
+		});
+	</script>
+	<script type="text/javascript">
+		function basexml_checktype() {
+			bxfSetValRadioBtn("root/personal/sex",'<xsl:value-of select="root/personal/sex"/>');
+bxfSetValRadioBtn("root/disease/kind",'<xsl:value-of select="root/disease/kind"/>');
+bxfSetValRadioBtn("root/doctor/expectedTreatmentDuration/expectedTreatmentStand",'<xsl:value-of select="root/doctor/expectedTreatmentDuration/expectedTreatmentStand"/>');
+		}
+	</script>
+	<script type="text/javascript" src="http://www.uccxml.com/xdrp/baseXML/lib/scripts/bxFormForMongo.js"></script>
+</head>
+<body>
+<form name="sanghae">
+	<textarea id="calXMLcontent" name="calXMLcontent" style="display:none"></textarea>
+	<textarea id="inXMLcontent" name="inXMLcontent" style="display:none"></textarea>
+	<textarea id="calTextcontent" name="calTextcontent" style="display:none"></textarea>
+	<textarea id="outXMLcontent" name="outXMLcontent" style="display:none"></textarea>
+	<textarea id="outXMLurl" name="outXMLurl" style="display:none"></textarea>
+	<input type="hidden" name="xmlFileLink" id="xmlFileLink" value=""/>
+	<input type="hidden" name="title" id="title" value="sanghae"/>
+	<input type="hidden" name="savefilepath" value="">
+	<input type="hidden" name="imagesavepath" value="">
+	<input type="hidden" name="imagematchinfo" value="">
+	<input type="hidden" name="H_DownloadFilePath" value="">
+	<input type="hidden" name="DownloadFilePath" value="">
+	<input type="hidden" name="formCategory" value="1">
+	<input type="hidden" name="H_root/doc/sicknessRecordNum" value=""/>
+	<input type="hidden" name="H_root/doc/number" value=""/>
+	<input type="hidden" name="H_root/personal/resiNum" value=""/>
+	<input type="hidden" name="H_root/personal/compName" value=""/>
+	<input type="hidden" name="H_root/personal/name" value=""/>
+	<input type="hidden" name="H_root/personal/sex" value=""/>
+	<input type="hidden" name="H_root/personal/birthday" value=""/>
+	<input type="hidden" name="H_root/personal/age" value=""/>
+	<input type="hidden" name="H_root/personal/adress" value=""/>
+	<input type="hidden" name="H_root/personal/telNum" value=""/>
+	<input type="hidden" name="H_root/disease/diseaseName" value=""/>
+	<input type="hidden" name="H_root/disease/kind" value=""/>
+	<input type="hidden" name="H_root/disease/diseaseNum" value=""/>
+	<input type="hidden" name="H_root/disease/symptom" value=""/>
+	<input type="hidden" name="H_root/disease/woundCause" value=""/>
+	<input type="hidden" name="H_root/disease/woundDate" value=""/>
+	<input type="hidden" name="H_root/disease/diagnosisDate" value=""/>
+	<input type="hidden" name="H_root/doctor/diagnosisOpinion" value=""/>
+	<input type="hidden" name="H_root/doctor/surgicalSurgery" value=""/>
+	<input type="hidden" name="H_root/doctor/admission" value=""/>
+	<input type="hidden" name="H_root/doctor/normalActivity" value=""/>
+	<input type="hidden" name="H_root/doctor/mealAvailable" value=""/>
+	<input type="hidden" name="H_root/doctor/expectedTreatmentDuration/expectedTreatmentFrom" value=""/>
+	<input type="hidden" name="H_root/doctor/expectedTreatmentDuration/expectedTreatmentStand" value=""/>
+	<input type="hidden" name="H_root/doctor/expectedTreatmentDuration/expectedTreatmentDay" value=""/>
+	<input type="hidden" name="H_root/doctor/incontinence" value=""/>
+	<input type="hidden" name="H_root/doctor/opinion" value=""/>
+	<input type="hidden" name="H_root/remark" value=""/>
+	<input type="hidden" name="H_root/doctor/doctorNum" value=""/>
+	<input type="hidden" name="H_root/doctor/doctorLicense" value=""/>
+	<input type="hidden" name="H_root/date" value=""/>
+	<input type="hidden" name="H_root/hospital/hospitalName" value=""/>
+	<input type="hidden" name="H_root/hospital/hospitalAdress" value=""/>
+	<input type="hidden" name="H_root/hospital/hospitalTel" value=""/>
+	<input type="hidden" name="H_root/doc/controversy" value=""/>
+	<input type="hidden" name="H_root/doctor/doctorSign" value=""/>
+<P>
+<TABLE style="WIDTH: 800px; margin: auto;" borderColor=#e0e0e0 cellSpacing=0 cellPadding=10 align=center border=15>
+<COLGROUP>
+<COL width=700>
+</COL>
+</COLGROUP>
+<TBODY>
+<TR>
+<TD>
+<P>
+<TABLE id=73 style="WIDTH: 800px" borderColor=#000000 cellSpacing=0 cellPadding=3 border=0>
+<COLGROUP>
+<COL width="33%">
+</COL>
+<COL width="33%">
+</COL>
+<COL>
+</COL>
+</COLGROUP>
+<TBODY id=73>
+<TR>
+<TD>
+<P>&nbsp;
+</P>
+</TD>
+<TD>
+<P align=center>
+<STRONG>
+<SPAN style="FONT-SIZE: 22pt">상&nbsp; 해&nbsp; 진&nbsp; 단&nbsp; 서
+</SPAN>
+</STRONG>
+</P>
+</TD>
+<TD rowSpan=2>
+<P align=right>
+<TABLE id=70 style="WIDTH: 100px" borderColor=#000000 cellSpacing=0 cellPadding=3 align=right border=2>
+<COLGROUP>
+<COL>
+</COL>
+</COLGROUP>
+<TBODY id=70>
+<TR>
+<TD>
+<P align=center>원부대조필
+</P>
+</TD>
+</TR>
+<TR>
+<TD>
+<DIV id=div_root_doc_controversy class=signature style="HEIGHT: 70px; WIDTH: 100px; POSITION: relative">
+</DIV>
+<P>&nbsp;
+</P>
+</TD>
+</TR>
+</TBODY>
+</TABLE>
+</P>
+<P>&nbsp;
+</P>
+</TD>
+</TR>
+<TR>
+<TD>
+<P>병록번호 :&nbsp;
+<INPUT style="HEIGHT: 22px; WIDTH: 113px" size=1 name=root/doc/sicknessRecordNum>
+</P>
+</TD>
+<TD>
+<P>&nbsp;
+</P>
+</TD>
+</TR>
+<TR>
+<TD>
+<P>연 번&nbsp;호 :&nbsp;
+<INPUT style="HEIGHT: 22px; WIDTH: 117px" size=1 name=root/doc/number>
+</P>
+</TD>
+<TD>
+<P>주민등록번호 :&nbsp;
+<INPUT style="HEIGHT: 22px; WIDTH: 118px" size=1 name=root/personal/resiNum>
+</P>
+</TD>
+<TD>
+<P align=right>동반자 :
+<INPUT style="HEIGHT: 22px; WIDTH: 113px" size=1 name=root/personal/compName>
+</P>
+</TD>
+</TR>
+</TBODY>
+</TABLE>
+</P>
+<P>
+<TABLE id=20180130_130420 style="WIDTH: 800px" borderColor=#000000 cellSpacing=0 cellPadding=3 border=2>
+<COLGROUP>
+<COL width="10%">
+</COL>
+<COL width="18%">
+</COL>
+<COL width=103>
+</COL>
+<COL width=52>
+</COL>
+<COL width=96>
+</COL>
+<COL width=73>
+</COL>
+<COL width=87>
+</COL>
+<COL>
+</COL>
+<COL width=50>
+</COL>
+</COLGROUP>
+<TBODY id=72>
+<TR>
+<TD colSpan=2>
+<P align=center>환자의 성명
+</P>
+</TD>
+<TD>
+<P>
+<INPUT style="HEIGHT: 22px; WIDTH: 96px" size=1 name=root/personal/name>
+</P>
+</TD>
+<TD>
+<P align=center>성별
+</P>
+</TD>
+<TD>
+<P align=center>
+<INPUT type=radio value=male name=root/personal/sex>남
+<INPUT type=radio value=female name=root/personal/sex>여
+</P>
+</TD>
+<TD>
+<P align=center>생년월일
+</P>
+</TD>
+<TD>
+<P>
+<INPUT id=datepicker_20180130_112657 style="HEIGHT: 22px; WIDTH: 91px" size=8 name=root/personal/birthday>
+</P>
+</TD>
+<TD>
+<P align=center>연령
+</P>
+</TD>
+<TD>
+<P align=center>만
+<INPUT style="HEIGHT: 22px; WIDTH: 20px" size=1 name=root/personal/age>세
+</P>
+</TD>
+</TR>
+<TR>
+<TD colSpan=2>
+<P align=center>환자의 주소
+</P>
+</TD>
+<TD colSpan=4>
+<P>
+<INPUT style="HEIGHT: 22px; WIDTH: 255px" name=root/personal/adress>
+</P>
+</TD>
+<TD colSpan=3>
+<P>전화번호 :
+<INPUT style="HEIGHT: 22px; WIDTH: 122px" size=1 name=root/personal/telNum>
+</P>
+</TD>
+</TR>
+<TR>
+<TD>
+<P align=center>병&nbsp; 명
+</P>
+</TD>
+<TD>
+<P>&nbsp;
+<INPUT type=radio value=estimation name=root/disease/kind>임상적추정
+</P>
+<P>&nbsp;
+</P>
+<P>&nbsp;
+<INPUT type=radio value=final name=root/disease/kind>최종진단
+</P>
+</TD>
+<TD colSpan=6>
+<P>
+<INPUT style="HEIGHT: 22px; WIDTH: 385px" size=24 name=root/disease/diseaseName>
+</P>
+</TD>
+<TD>
+<P align=center>한국질병
+</P>
+<P align=center>분류번호
+</P>
+<P>
+<INPUT style="HEIGHT: 22px; WIDTH: 71px" size=1 name=root/disease/diseaseNum>
+</P>
+</TD>
+</TR>
+<TR>
+<TD colSpan=2>
+<P align=center>상해년월일
+</P>
+</TD>
+<TD colSpan=2>
+<P>
+<INPUT style="HEIGHT: 22px; WIDTH: 97px" size=1 name=root/disease/woundDate>&nbsp;(추정)
+</P>
+</TD>
+<TD colSpan=2>
+<P align=center>진 단 일
+</P>
+</TD>
+<TD colSpan=3>
+<P>
+<INPUT name=root/disease/diagnosisDate>
+</P>
+</TD>
+</TR>
+<TR>
+<TD colSpan=2>
+<P align=center>상해의원인
+</P>
+</TD>
+<TD colSpan=7>
+<P>
+<INPUT style="HEIGHT: 22px; WIDTH: 422px" size=29 name=root/disease/woundCause>
+</P>
+</TD>
+</TR>
+<TR>
+<TD>
+<P align=center>증&nbsp; 상
+</P>
+</TD>
+<TD>
+<P align=center>상해부위와 정도
+</P>
+</TD>
+<TD colSpan=7>
+<P>
+<INPUT style="HEIGHT: 22px; WIDTH: 427px" size=34 name=root/disease/symptom>
+</P>
+</TD>
+</TR>
+<TR>
+<TD rowSpan=5>
+<P align=center>상해에
+</P>
+<P align=center>대한
+</P>
+<P align=center>소견
+</P>
+</TD>
+<TD>
+<P align=center>진료 경과 의견
+</P>
+</TD>
+<TD colSpan=7>
+<P>
+<INPUT style="HEIGHT: 22px; WIDTH: 428px" size=35 name=root/doctor/diagnosisOpinion>
+</P>
+</TD>
+</TR>
+<TR>
+<TD>
+<P align=center>외과적 수술여부
+</P>
+</TD>
+<TD colSpan=7>
+<P>
+<INPUT style="HEIGHT: 22px; WIDTH: 433px" size=37 name=root/doctor/surgicalSurgery>
+</P>
+</TD>
+</TR>
+<TR>
+<TD>
+<P align=center>입원여부
+</P>
+</TD>
+<TD colSpan=7>
+<P>
+<INPUT style="HEIGHT: 22px; WIDTH: 432px" size=32 name=root/doctor/admission>
+</P>
+</TD>
+</TR>
+<TR>
+<TD>
+<P align=center>통상활동가능여부
+</P>
+</TD>
+<TD colSpan=7>
+<P>
+<INPUT style="HEIGHT: 22px; WIDTH: 427px" size=32 name=root/doctor/normalActivity>
+</P>
+</TD>
+</TR>
+<TR>
+<TD>
+<P align=center>식사 가능 여부
+</P>
+</TD>
+<TD colSpan=7>
+<P>
+<INPUT style="HEIGHT: 22px; WIDTH: 426px" size=37 name=root/doctor/mealAvailable>
+</P>
+</TD>
+</TR>
+<TR>
+<TD colSpan=2>
+<P align=center>예상치료기간
+</P>
+</TD>
+<TD colSpan=7>
+<INPUT id=datepicker_20180130_114005 style="WIDTH: 100px" name=root/doctor/expectedTreatmentDuration/expectedTreatmentFrom>&nbsp;(
+<INPUT type=radio value=woundDay name=root/doctor/expectedTreatmentDuration/expectedTreatmentStand>수상일
+<INPUT type=radio value=diagnosisDay name=root/doctor/expectedTreatmentDuration/expectedTreatmentStand>진료일)로부터&nbsp;
+<INPUT style="HEIGHT: 22px; WIDTH: 120px" size=1 name=root/doctor/expectedTreatmentDuration/expectedTreatmentDay>일간
+</TD>
+</TR>
+<TR>
+<TD rowSpan=2>
+<P align=center>향후
+</P>
+<P align=center>치료에
+</P>
+<P align=center>대한의견
+</P>
+</TD>
+<TD>
+<P align=center>향후치료의견
+</P>
+</TD>
+<TD colSpan=7>
+<INPUT style="HEIGHT: 22px; WIDTH: 422px" size=34 name=root/doctor/opinion>
+</TD>
+</TR>
+<TR>
+<TD>
+<P align=center>병발증발생
+</P>
+<P align=center>가능여부
+</P>
+</TD>
+<TD colSpan=7>
+<INPUT style="HEIGHT: 22px; WIDTH: 424px" size=31 name=root/doctor/incontinence>
+</TD>
+</TR>
+<TR>
+<TD>
+<P align=center>비&nbsp; 고
+</P>
+</TD>
+<TD colSpan=8>
+<INPUT style="HEIGHT: 22px; WIDTH: 511px" size=12 name=root/remark>
+</TD>
+</TR>
+</TBODY>
+</TABLE>
+</P>
+<P>&nbsp;
+</P>
+<P>
+<STRONG>
+<SPAN style="FONT-SIZE: 16pt">위와 같이 진단함.
+</SPAN>
+</STRONG>
+</P>
+<P>&nbsp;
+</P>
+<P>&nbsp;발&nbsp;&nbsp; &nbsp;행&nbsp;&nbsp;&nbsp; 일 :
+<INPUT id=datepicker_20180130_114702 style="WIDTH: 100px" name=root/date>
+</P>
+<P>의 &nbsp;료 &nbsp;기&nbsp; 관 :
+<INPUT style="HEIGHT: 22px; WIDTH: 395px" size=23 name=root/hospital/hospitalName>
+</P>
+<P>주소&nbsp;및&nbsp;명칭&nbsp;:
+<INPUT style="HEIGHT: 22px; WIDTH: 410px" size=33 name=root/hospital/hospitalAdress>
+</P>
+<P>전화&nbsp;및&nbsp;FAX&nbsp;&nbsp;:
+<INPUT style="HEIGHT: 22px; WIDTH: 169px" name=root/hospital/hospitalTel>
+</P>
+<P>
+<TABLE id=20180130_124550 style="WIDTH: 800px" borderColor=#000000 cellSpacing=0 cellPadding=3 border=0>
+<COLGROUP>
+<COL width="33%">
+</COL>
+<COL width="33%">
+</COL>
+<COL>
+</COL>
+</COLGROUP>
+<TBODY>
+<TR>
+<TD>
+<P>면허번호 제
+<INPUT style="HEIGHT: 22px; WIDTH: 117px" size=1 name=root/doctor/doctorNum>호
+</P>
+</TD>
+<TD>
+<P align=center>면허자격 :
+<INPUT style="HEIGHT: 22px; WIDTH: 133px" size=8 name=root/doctor/doctorLicense>
+</P>
+</TD>
+<TD>
+<DIV id=div_root_doctor_doctorSign class=signature style="HEIGHT: 40px; WIDTH: 300px; POSITION: relative">
+</DIV>
+<P>&nbsp;
+</P>
+</TD>
+</TR>
+</TBODY>
+</TABLE>
+</P>
+</TD>
+</TR>
+</TBODY>
+</TABLE>
+</P>
+<input type="hidden" name="root/doc/controversy" id="root_doc_controversy">
+<input type="hidden" name="root/doctor/doctorSign" id="root_doctor_doctorSign">
+<br>
+<table id="last-table" style="margin: auto;">
+	  <tr>
+	    <td style="text-align: center; margin: 5px;">의사  계좌</td>
+	    <td>
+	      <input type="text" id="account" size="50" placeholder="의사의 계좌를 입력하시오"/>
+	    </td>
+	  </tr>
+	  <tr>
+	  	<td style="text-align: center; margin: 5px;">의사 인증키</td>
+	    <td>
+	      <input type="password" id="passphrase" size="25" placeholder="의사의 인증키를 입력하시오"/>
+	    </td>  	
+	  </tr>
+	  <tr>
+	    <td style="text-align: center; margin: 5px;">환자 계좌</td>
+	    <td>
+	      <input type="text" id="accountPatient" size="50" placeholder="환자의 계좌를 입력하시오"/>
+	    </td>
+	  </tr>
+</table><br>
+</form>
+<script type="text/javascript" src="http://www.uccxml.com/xdrp/sys/lib/bxComponent/tinymce/js/tinymce/tinymce.min.js"></script>
+<script type="text/javascript" src="http://www.uccxml.com/xdrp/sys/lib/bxComponent/bxComponent.js"></script>
+
+<p style="text-align: center;"><input type="button" value="발급하기" onclick="javascript:saveSoaxml();"/> &#160;</p>
+<script src="../public/js/web3.js"></script>
+<script src="../public/js/web3.jb.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		loaded();
+	});
+</script>
+<script LANGUAGE="JavaScript" FOR="XMLfile" EVENT="XMLdown(lFile)">
+	if(lFile != "" ) {
+		document.forms[0].outXMLcontent.value=lFile;
+		document.title=lFile;
+	}
+</script>
+<script LANGUAGE="JScript" FOR="XMLfile" EVENT="XMLupdate(lFile)">
+	if(lFile != "" ) {
+		bxfXmlDisplay(lFile);
+	}
+</script>
+<script>
+	$(document).ready(function(){
+		MakeInputSign($("#div_root_doc_controversy"), $("#root_doc_controversy"));
+MakeInputSign($("#div_root_doctor_doctorSign"), $("#root_doctor_doctorSign"));
+	});
+</script>
+</body>
+</html>

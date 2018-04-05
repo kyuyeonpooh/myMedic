@@ -1,0 +1,1218 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv=content-type>
+	<meta name=generator content="mshtml 8.00.6001.18852">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title> Prescription </title>
+	<link rel="shortcut icon" href="http://www.3ksoftware.com/favicon.ico"/>
+	<link type="text/css" href="http://www.uccxml.com/xdrp/baseXML/lib/css/soaxml_common.css" rel="stylesheet"  media="screen"/>
+	<link type="text/css" href="http://www.uccxml.com/xdrp/baseXML/lib/css/uniform.default.css" rel="stylesheet" media="screen" />
+	<link type="text/css" href="http://www.uccxml.com/xdrp/baseXML/lib/css/jquery-ui.1.10.3.smoothness.css" rel="stylesheet" media="screen" />
+	
+	<style>
+		form	{height:100%; overflow:auto;}
+		canvas	{height:inherit !important;}
+	</style>
+
+<style>
+
+form {height:100%; overflow:auto;}
+canvas {height:inherit !important;}
+
+</style>
+
+	<script type="text/javascript" src="http://www.uccxml.com/xdrp/baseXML/lib/scripts/bxControl.js"></script>
+	<script type="text/javascript" src="http://www.uccxml.com/xdrp/baseXML/lib/scripts/bxCommon.js"></script>
+	<script type="text/javascript" src="http://www.uccxml.com/xdrp/baseXML/lib/scripts/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="http://www.uccxml.com/xdrp/baseXML/lib/scripts/jquery-ui.1.10.3.min.js"></script>
+	<script type="text/javascript" src="http://www.uccxml.com/xdrp/baseXML/lib/scripts/jquery.uniform.js"></script>
+	<script type="text/javascript" src="http://www.uccxml.com/xdrp/baseXML/lib/scripts/jquery.timepicker.js"></script>
+	<script type="text/javascript" src="http://www.uccxml.com/xdrp/baseXML/lib/scripts/jSignature.custom.js"></script>
+	<script type="text/javascript" charset="utf-8">
+		$(function(){
+			$("input, textarea, select, button").uniform();
+			$( "#datepicker_20180129_113759" ).datepicker({dateFormat: "yy-mm-dd", changeMonth:true, changeYear:true, yearRange:"1950:2050"});
+$( "#datepicker_20180129_120718" ).datepicker({dateFormat: "yy-mm-dd", changeMonth:true, changeYear:true, yearRange:"1950:2050"});
+$( ".bxTimePicker" ).timepicker({ 'scrollDefaultNow': true });
+		});
+	</script>
+	<script type="text/javascript">
+		function basexml_checktype() {
+			bxfSetValCheckBox("root/rootTrivia",'<xsl:value-of select="root/rootTrivia"/>');
+bxfSetValComboBox("root/doseNo/doseNo1",'<xsl:value-of select="root/doseNo/doseNo1"/>');
+bxfSetValComboBox("root/doseNo/doseNo2",'<xsl:value-of select="root/doseNo/doseNo2"/>');
+bxfSetValComboBox("root/doseNo/doseNo3",'<xsl:value-of select="root/doseNo/doseNo3"/>');
+bxfSetValComboBox("root/doseNo/doseNo4",'<xsl:value-of select="root/doseNo/doseNo4"/>');
+bxfSetValComboBox("root/doseNo/doseNo5",'<xsl:value-of select="root/doseNo/doseNo5"/>');
+bxfSetValComboBox("root/doseNo/doseNo6",'<xsl:value-of select="root/doseNo/doseNo6"/>');
+bxfSetValComboBox("root/doseNo/doseNo7",'<xsl:value-of select="root/doseNo/doseNo7"/>');
+bxfSetValComboBox("root/doseNo/doseNo8",'<xsl:value-of select="root/doseNo/doseNo8"/>');
+bxfSetValComboBox("root/doseNo/doseNo9",'<xsl:value-of select="root/doseNo/doseNo9"/>');
+bxfSetValComboBox("root/doseNo/doseNo10",'<xsl:value-of select="root/doseNo/doseNo10"/>');
+bxfSetValComboBox("root/doseNo/doseNO11",'<xsl:value-of select="root/doseNo/doseNO11"/>');
+bxfSetValComboBox("root/doseNo/doseNo12",'<xsl:value-of select="root/doseNo/doseNo12"/>');
+		}
+	</script>
+	<script type="text/javascript" src="http://www.uccxml.com/xdrp/baseXML/lib/scripts/bxFormForMongo.js"></script>
+</head>
+<body>
+<form name="scription">
+	<textarea id="calXMLcontent" name="calXMLcontent" style="display:none"></textarea>
+	<textarea id="inXMLcontent" name="inXMLcontent" style="display:none"></textarea>
+	<textarea id="calTextcontent" name="calTextcontent" style="display:none"></textarea>
+	<textarea id="outXMLcontent" name="outXMLcontent" style="display:none"></textarea>
+	<textarea id="outXMLurl" name="outXMLurl" style="display:none"></textarea>
+	<input type="hidden" name="xmlFileLink" id="xmlFileLink" value=""/>
+	<input type="hidden" name="title" id="title" value="scription"/>
+	<input type="hidden" name="savefilepath" value="">
+	<input type="hidden" name="imagesavepath" value="">
+	<input type="hidden" name="imagematchinfo" value="">
+	<input type="hidden" name="H_DownloadFilePath" value="">
+	<input type="hidden" name="DownloadFilePath" value="">
+	<input type="hidden" name="formCategory" value="2" />
+	<input type="hidden" name="H_root/rootTrivia" value=""/>
+<input type="hidden" name="H_root/rootTrivia/triviaEtc" value=""/>
+<input type="hidden" name="H_root/patient/patientDate" value=""/>
+<input type="hidden" name="H_root/patient/patientNo" value=""/>
+<input type="hidden" name="H_root/patient/patientName" value=""/>
+<input type="hidden" name="H_root/patient/patientID" value=""/>
+<input type="hidden" name="H_root/patient/patientIDs" value=""/>
+<input type="hidden" name="H_root/Ins/insName" value=""/>
+<input type="hidden" name="H_root/Ins/insTel" value=""/>
+<input type="hidden" name="H_root/Ins/insFax" value=""/>
+<input type="hidden" name="H_root/Ins/inEmail" value=""/>
+<input type="hidden" name="H_root/Ins/insEmails" value=""/>
+<input type="hidden" name="H_root/sort/sor1" value=""/>
+<input type="hidden" name="H_root/sort/sort2" value=""/>
+<input type="hidden" name="H_root/sort/sort3" value=""/>
+<input type="hidden" name="H_root/sort/sort4" value=""/>
+<input type="hidden" name="H_root/sort/sort5" value=""/>
+<input type="hidden" name="H_root/sort/sort6" value=""/>
+<input type="hidden" name="H_root/sort/sort7" value=""/>
+<input type="hidden" name="H_root/sort/sort8" value=""/>
+<input type="hidden" name="H_root/sort/sort9" value=""/>
+<input type="hidden" name="H_root/sort/sort10" value=""/>
+<input type="hidden" name="H_root/doctor/doctorName" value=""/>
+<input type="hidden" name="H_root/doctor/doctorSpecies" value=""/>
+<input type="hidden" name="H_root/doctor/doctorNo" value=""/>
+<input type="hidden" name="H_root/pillName/pillName1" value=""/>
+<input type="hidden" name="H_root/pillName/pillname2" value=""/>
+<input type="hidden" name="H_root/pillName/pillName3" value=""/>
+<input type="hidden" name="H_root/pillName/pillName4" value=""/>
+<input type="hidden" name="H_root/pillName/pillName5" value=""/>
+<input type="hidden" name="H_root/pillName/pillName6" value=""/>
+<input type="hidden" name="H_root/pillName/pillName7" value=""/>
+<input type="hidden" name="H_root/pillName/pillName8" value=""/>
+<input type="hidden" name="H_root/pillName/pillName9" value=""/>
+<input type="hidden" name="H_root/pillName/pillName10" value=""/>
+<input type="hidden" name="H_root/pillName/pillName11" value=""/>
+<input type="hidden" name="H_root/pillName/pillName12" value=""/>
+<input type="hidden" name="H_root/doseper/dosePer1" value=""/>
+<input type="hidden" name="H_root/doseper/dosePer2" value=""/>
+<input type="hidden" name="H_root/doseper/dosePer3" value=""/>
+<input type="hidden" name="H_root/doseper/dosePer4" value=""/>
+<input type="hidden" name="H_root/doseper/dosePer5" value=""/>
+<input type="hidden" name="H_root/doseper/dosePer6" value=""/>
+<input type="hidden" name="H_root/doseper/dosePer7" value=""/>
+<input type="hidden" name="H_root/doseper/dosePer8" value=""/>
+<input type="hidden" name="H_root/doseper/dosePer9" value=""/>
+<input type="hidden" name="H_root/doseper/dosePer10" value=""/>
+<input type="hidden" name="H_root/doseper/dosePer11" value=""/>
+<input type="hidden" name="H_root/doseper/dosePer12" value=""/>
+<input type="hidden" name="H_root/doseNo/doseNo1" value=""/>
+<input type="hidden" name="H_root/doseNo/doseNo2" value=""/>
+<input type="hidden" name="H_root/doseNo/doseNo3" value=""/>
+<input type="hidden" name="H_root/doseNo/doseNo4" value=""/>
+<input type="hidden" name="H_root/doseNo/doseNo5" value=""/>
+<input type="hidden" name="H_root/doseNo/doseNo6" value=""/>
+<input type="hidden" name="H_root/doseNo/doseNo7" value=""/>
+<input type="hidden" name="H_root/doseNo/doseNo8" value=""/>
+<input type="hidden" name="H_root/doseNo/doseNo9" value=""/>
+<input type="hidden" name="H_root/doseNo/doseNo10" value=""/>
+<input type="hidden" name="H_root/doseNo/doseNO11" value=""/>
+<input type="hidden" name="H_root/doseNo/doseNo12" value=""/>
+<input type="hidden" name="H_root/doseday/doseday5" value=""/>
+<input type="hidden" name="H_root/trivia" value=""/>
+<input type="hidden" name="H_root/injection/injectionBody" value=""/>
+<input type="hidden" name="H_root/injection/medicineTrivia" value=""/>
+<input type="hidden" name="H_root/useDate/useDay" value=""/>
+<input type="hidden" name="H_root/prepare/perpareName" value=""/>
+<input type="hidden" name="H_root/prepare/prepareName" value=""/>
+<input type="hidden" name="H_root/prepare/prepareSign" value=""/>
+<input type="hidden" name="H_root/prepare/prepareAmount" value=""/>
+<input type="hidden" name="H_root/prepare/prepareYearmonthday" value=""/>
+<input type="hidden" name="H_root/prepare/prepareTrivia" value=""/>
+<input type="hidden" name="H_root/doseday/doseDay1" value=""/>
+<input type="hidden" name="H_root/doseday/doseDay2" value=""/>
+<input type="hidden" name="H_root/doseday/doseDay3" value=""/>
+<input type="hidden" name="H_root/doseday/doseDay4" value=""/>
+<input type="hidden" name="H_root/doseday/doseDay6" value=""/>
+<input type="hidden" name="H_root/doseday/doseDay7" value=""/>
+<input type="hidden" name="H_root/doseday/doseDay8" value=""/>
+<input type="hidden" name="H_root/doseday/doseDay9" value=""/>
+<input type="hidden" name="H_root/doseday/doseDay10" value=""/>
+<input type="hidden" name="H_root/doseday/doseDay11" value=""/>
+<input type="hidden" name="H_root/doseday/doseDay12" value=""/>
+<P>
+<TABLE style="HEIGHT: 532px; WIDTH: 844px; margin: auto;" borderColor=#000000 cellSpacing=0 cellPadding=8 align=center border=4>
+<COLGROUP>
+<COL width=700>
+</COL>
+</COLGROUP>
+<TBODY>
+<TR>
+<TD>
+<P align=center>
+<SPAN style="FONT-SIZE: 8pt">
+</SPAN>
+</P>
+<P align=center>
+<SPAN style="FONT-SIZE: 10pt">
+</SPAN>
+</P>
+<P align=center>
+<SPAN style="FONT-SIZE: 28pt">Prescription
+</SPAN>
+</P>
+<P align=center>
+<SPAN style="FONT-SIZE: 10pt">&nbsp;
+</SPAN>
+</P>
+<P align=center>
+<SPAN style="FONT-SIZE: 9pt">
+</SPAN>
+</P>
+<P>&nbsp;
+<INPUT type=checkbox value=MI name=root/rootTrivia>M.Isurance
+<INPUT type=checkbox value=MP name=root/rootTrivia>M.Pay
+<INPUT type=checkbox value=II name=root/rootTrivia>A.Insurance
+<INPUT type=checkbox value=CI name=root/rootTrivia>Car Insurance
+<INPUT type=checkbox value=etc name=root/rootTrivia>ETC(
+<INPUT style="HEIGHT: 24px; WIDTH: 86px" size=1 name=root/rootTrivia/triviaEtc>)
+</P>
+<P>
+<TABLE id=33 style="HEIGHT: 160px; WIDTH: 857px" borderColor=#000000 cellSpacing=0 cellPadding=3 border=2>
+<COLGROUP>
+<COL width=20>
+</COL>
+<COL width=100>
+</COL>
+<COL width=132>
+</COL>
+<COL width=20>
+</COL>
+<COL width=116>
+</COL>
+<COL width=200>
+</COL>
+</COLGROUP>
+<TBODY id=33>
+<TR>
+<TD colSpan=2>
+<P align=center>
+<STRONG>Date of Issue
+</STRONG>
+</P>
+</TD>
+<TD>
+<P align=center>
+<INPUT id=datepicker_20180129_113759 style="HEIGHT: 22px; WIDTH: 128px" size=16 name=root/patient/patientDate>
+</P>
+</TD>
+<TD rowSpan=4>
+<P align=center>
+<STRONG>In
+</STRONG>
+</P>
+<P align=center>
+<STRONG>sti
+</STRONG>
+</P>
+<P align=center>
+<STRONG>tut
+</STRONG>
+</P>
+<P align=center>
+<STRONG>ion
+</STRONG>
+</P>
+</TD>
+<TD>
+<P align=center>
+<STRONG>Name
+</STRONG>
+</P>
+</TD>
+<TD>
+<P align=center>
+<INPUT name=root/Ins/insName>
+</P>
+</TD>
+</TR>
+<TR>
+<TD colSpan=2>
+<P align=center>
+<STRONG>No of Issue
+</STRONG>
+</P>
+</TD>
+<TD>
+<P align=center>
+<INPUT style="HEIGHT: 20px; WIDTH: 127px" size=11 name=root/patient/patientNo>
+</P>
+</TD>
+<TD>
+<P align=center>
+<STRONG>Tel.
+</STRONG>
+</P>
+</TD>
+<TD>
+<P align=center>
+<INPUT name=root/Ins/insTel>
+</P>
+</TD>
+</TR>
+<TR>
+<TD rowSpan=2>
+<P align=center>
+<STRONG>Patient
+</STRONG>
+</P>
+<P align=center>
+<STRONG>
+</STRONG>
+</P>
+</TD>
+<TD>
+<P align=center>
+<STRONG>Name
+</STRONG>
+</P>
+</TD>
+<TD>
+<P align=center>
+<INPUT style="HEIGHT: 19px; WIDTH: 132px" size=14 name=root/patient/patientName>
+</P>
+</TD>
+<TD>
+<P align=center>
+<STRONG>Fax No.
+</STRONG>
+</P>
+</TD>
+<TD>
+<P align=center>
+<INPUT name=root/Ins/insFax>
+</P>
+</TD>
+</TR>
+<TR>
+<TD>
+<P align=center>
+<STRONG>RRN
+</STRONG>
+</P>
+</TD>
+<TD>
+<P align=center>
+<INPUT style="HEIGHT: 21px; WIDTH: 75px" size=1 name=root/patient/patientID>-
+<INPUT style="HEIGHT: 21px; WIDTH: 77px" size=1 name=root/patient/patientIDs>
+</P>
+</TD>
+<TD>
+<P align=center>
+<STRONG>E-mail
+</STRONG>
+</P>
+</TD>
+<TD>
+<P align=center>
+<INPUT style="HEIGHT: 29px; WIDTH: 91px" size=1 name=root/Ins/inEmail>@
+<INPUT style="HEIGHT: 28px; WIDTH: 130px" size=1 name=root/Ins/insEmails>
+</P>
+</TD>
+</TR>
+</TBODY>
+</TABLE>
+</P>
+<DIV align=center>
+<TABLE id=20180127_193907 style="HEIGHT: 48px; WIDTH: 858px" borderColor=#000000 cellSpacing=0 cellPadding=3 align=center border=1>
+<COLGROUP>
+<STRONG>
+<COL width=50>
+</COL>
+<COL width=40>
+</COL>
+<COL width=40>
+</COL>
+<COL width=40>
+</COL>
+<COL width=40>
+</COL>
+<COL width=40>
+</COL>
+<COL width=100>
+</COL>
+<COL width=100>
+</COL>
+<COL width=70>
+</COL>
+<COL width=150>
+</COL>
+</STRONG>
+</COLGROUP>
+<TBODY id=32>
+<TR>
+<TD rowSpan=2>
+<P align=center>
+<STRONG>Disease
+</STRONG>
+</P>
+<P align=center>
+<STRONG>No.
+</STRONG>
+</P>
+<P align=center>
+<STRONG>Sort
+</STRONG>
+</P>
+</TD>
+<TD>
+<P align=center>
+<INPUT style="HEIGHT: 22px; WIDTH: 41px" size=1 name=root/sort/sor1>
+</P>
+</TD>
+<TD>
+<P align=center>
+<INPUT style="HEIGHT: 22px; WIDTH: 43px" size=1 name=root/sort/sort2>
+</P>
+</TD>
+<TD>
+<P align=center>
+<INPUT style="HEIGHT: 22px; WIDTH: 43px" size=1 name=root/sort/sort3>
+</P>
+</TD>
+<TD>
+<P align=center>
+<INPUT style="HEIGHT: 22px; WIDTH: 41px" size=1 name=root/sort/sort4>
+</P>
+</TD>
+<TD>
+<P align=center>
+<INPUT style="HEIGHT: 27px; WIDTH: 36px" size=1 name=root/sort/sort5>
+</P>
+</TD>
+<TD rowSpan=2>
+<P align=center>
+<STRONG>Doctor's Signature
+</STRONG>
+</P>
+</TD>
+<TD rowSpan=2>
+<P align=center>
+<INPUT style="HEIGHT: 48px; WIDTH: 80px" size=1 name=root/doctor/doctorName>
+</P>
+</TD>
+<TD>
+<P align=center>
+<STRONG>Identification Type
+</STRONG>
+</P>
+</TD>
+<TD>
+<P align=center>
+<INPUT name=root/doctor/doctorSpecies>
+</P>
+</TD>
+</TR>
+<TR>
+<TD>
+<P align=center>
+<INPUT style="HEIGHT: 22px; WIDTH: 43px" size=1 name=root/sort/sort6>
+</P>
+</TD>
+<TD>
+<P align=center>
+<INPUT style="HEIGHT: 22px; WIDTH: 43px" size=1 name=root/sort/sort7>
+</P>
+</TD>
+<TD>
+<P align=center>
+<INPUT style="HEIGHT: 22px; WIDTH: 45px" size=1 name=root/sort/sort8>
+</P>
+</TD>
+<TD>
+<P align=center>
+<INPUT style="HEIGHT: 22px; WIDTH: 41px" size=1 name=root/sort/sort9>
+</P>
+</TD>
+<TD>
+<P align=center>
+<INPUT style="HEIGHT: 23px; WIDTH: 39px" size=1 name=root/sort/sort10>
+</P>
+</TD>
+<TD>
+<P align=center>
+<STRONG>Indentification No.
+</STRONG>
+</P>
+</TD>
+<TD>
+<P align=center>
+<INPUT name=root/doctor/doctorNo>
+</P>
+</TD>
+</TR>
+</TBODY>
+</TABLE>
+</DIV>
+<P align=center>
+</P>
+<P align=center>* Do not write down Diagnosis No. if patient ask for not to.
+</P>
+<P align=center>
+</P>
+<P align=center>
+<TABLE style="HEIGHT: 191px; WIDTH: 857px" borderColor=#000000 cellSpacing=0 cellPadding=3 border=2>
+<COLGROUP>
+<COL width="47%">
+</COL>
+<COL width=71>
+</COL>
+<COL width=141>
+</COL>
+<COL width=141>
+</COL>
+<COL width=141>
+</COL>
+<COL width="26%">
+</COL>
+</COLGROUP>
+<TBODY>
+<TR>
+<TD colSpan=2>
+<P align=center>
+<STRONG>Drug Name
+</STRONG>
+</P>
+</TD>
+<TD>
+<P align=center>
+<STRONG>Dose
+</STRONG>
+</P>
+<P align=center>
+<STRONG>/per
+</STRONG>
+</P>
+</TD>
+<TD>
+<P align=center>
+<STRONG>time
+</STRONG>
+</P>
+<P align=center>
+<STRONG>/day
+</STRONG>
+</P>
+</TD>
+<TD>
+<P align=center>
+<STRONG>Medication
+</STRONG>
+</P>
+<P align=center>
+<STRONG>period
+</STRONG>
+</P>
+<P align=center>
+<STRONG>
+</STRONG>
+</P>
+</TD>
+<TD>
+<P align=center>
+<STRONG>Trivia
+</STRONG>
+</P>
+</TD>
+</TR>
+<TR>
+<TD colSpan=2>
+<P align=center>
+<INPUT name=root/pillName/pillName1>
+</P>
+</TD>
+<TD>
+<P align=center>
+<INPUT style="HEIGHT: 22px; WIDTH: 39px" size=1 name=root/doseper/dosePer1>
+</P>
+</TD>
+<TD>
+<P align=center>
+<SELECT name=root/doseNo/doseNo1>
+<OPTION selected value=1>1
+</OPTION>
+<OPTION value=2>2
+</OPTION>
+<OPTION value=3>3
+</OPTION>
+<OPTION value=4>4
+</OPTION>
+<OPTION value=5>5
+</OPTION>
+</SELECT>
+</P>
+</TD>
+<TD>
+<P align=center>
+<INPUT style="HEIGHT: 22px; WIDTH: 39px" size=1 name=root/doseday/doseDay1>days
+</P>
+</TD>
+<TD rowSpan=12>
+<P align=center>
+</P>
+<P align=center>
+</P>
+<P align=center>
+</P>
+<P align=center>
+</P>
+<P align=center>
+</P>
+<P align=center>
+<TEXTAREA style="HEIGHT: 169px; WIDTH: 184px" rows=1 name=root/trivia>
+</TEXTAREA>&nbsp;
+</P>
+<P align=center>
+</P>
+<P align=center>
+</P>
+<P align=center>
+</P>
+<P align=center>
+</P>
+<P align=center>
+</P>
+<P>&nbsp;
+</P>
+</TD>
+</TR>
+<TR>
+<TD colSpan=2>
+<P align=center>
+<INPUT name=root/pillName/pillname2>
+</P>
+</TD>
+<TD>
+<P align=center>
+<INPUT style="HEIGHT: 22px; WIDTH: 37px" size=1 name=root/doseper/dosePer2>
+</P>
+</TD>
+<TD>
+<P align=center>
+<SELECT name=root/doseNo/doseNo2>
+<OPTION selected value=1>1
+</OPTION>
+<OPTION value=2>2
+</OPTION>
+<OPTION value=3>3
+</OPTION>
+<OPTION value=4>4
+</OPTION>
+<OPTION value=5>5
+</OPTION>
+</SELECT>
+</P>
+</TD>
+<TD>
+<P align=center>
+<INPUT style="HEIGHT: 22px; WIDTH: 39px" size=1 name=root/doseday/doseDay2>days
+</P>
+</TD>
+</TR>
+<TR>
+<TD colSpan=2>
+<P align=center>
+<INPUT name=root/pillName/pillName3>
+</P>
+</TD>
+<TD>
+<P align=center>
+<INPUT style="HEIGHT: 22px; WIDTH: 39px" size=1 name=root/doseper/dosePer3>
+</P>
+</TD>
+<TD>
+<P align=center>
+<SELECT name=root/doseNo/doseNo3>
+<OPTION selected value=1>1
+</OPTION>
+<OPTION value=2>2
+</OPTION>
+<OPTION value=3>3
+</OPTION>
+<OPTION value=4>4
+</OPTION>
+<OPTION value=5>5
+</OPTION>
+</SELECT>
+</P>
+</TD>
+<TD>
+<P align=center>
+<INPUT style="HEIGHT: 22px; WIDTH: 39px" size=1 name=root/doseday/doseDay3>days
+</P>
+</TD>
+</TR>
+<TR>
+<TD colSpan=2>
+<P align=center>
+<INPUT name=root/pillName/pillName4>
+</P>
+</TD>
+<TD>
+<P align=center>
+<INPUT style="HEIGHT: 22px; WIDTH: 40px" size=1 name=root/doseper/dosePer4>
+</P>
+</TD>
+<TD>
+<P align=center>
+<SELECT name=root/doseNo/doseNo4>
+<OPTION selected value=1>1
+</OPTION>
+<OPTION value=2>2
+</OPTION>
+<OPTION value=3>3
+</OPTION>
+<OPTION value=4>4
+</OPTION>
+<OPTION value=5>5
+</OPTION>
+</SELECT>
+</P>
+</TD>
+<TD>
+<P align=center>
+<INPUT style="HEIGHT: 22px; WIDTH: 39px" size=1 name=root/doseday/doseDay4>days
+</P>
+</TD>
+</TR>
+<TR>
+<TD colSpan=2>
+<P align=center>
+<INPUT name=root/pillName/pillName5>
+</P>
+</TD>
+<TD>
+<P align=center>
+<INPUT style="HEIGHT: 22px; WIDTH: 39px" size=1 name=root/doseper/dosePer5>
+</P>
+</TD>
+<TD>
+<P align=center>
+<SELECT name=root/doseNo/doseNo5>
+<OPTION selected value=1>1
+</OPTION>
+<OPTION value=2>2
+</OPTION>
+<OPTION value=3>3
+</OPTION>
+<OPTION value=4>4
+</OPTION>
+<OPTION value=5>5
+</OPTION>
+</SELECT>
+</P>
+</TD>
+<TD>
+<P align=center>
+<INPUT style="HEIGHT: 22px; WIDTH: 39px" size=1 name=root/doseday/doseday5>days
+</P>
+</TD>
+</TR>
+<TR>
+<TD colSpan=2>
+<P align=center>
+<INPUT name=root/pillName/pillName6>
+</P>
+</TD>
+<TD>
+<P align=center>
+<INPUT style="HEIGHT: 22px; WIDTH: 40px" size=1 name=root/doseper/dosePer6>
+</P>
+</TD>
+<TD>
+<P align=center>
+<SELECT style="WIDTH: 37px" name=root/doseNo/doseNo6>
+<OPTION selected value=1>1
+</OPTION>
+<OPTION value=2>2
+</OPTION>
+<OPTION value=3>3
+</OPTION>
+<OPTION value=4>4
+</OPTION>
+<OPTION value=5>5
+</OPTION>
+</SELECT>&nbsp;
+</P>
+</TD>
+<TD>
+<P align=center>
+<INPUT style="HEIGHT: 22px; WIDTH: 39px" size=1 name=root/doseday/doseDay6>days
+</P>
+</TD>
+</TR>
+<TR>
+<TD colSpan=2>
+<P align=center>
+<INPUT name=root/pillName/pillName7>
+</P>
+</TD>
+<TD>
+<P align=center>
+<INPUT style="HEIGHT: 22px; WIDTH: 42px" size=3 name=root/doseper/dosePer7>
+</P>
+</TD>
+<TD>
+<P align=center>
+<SELECT name=root/doseNo/doseNo7>
+<OPTION selected value=1>1
+</OPTION>
+<OPTION value=2>2
+</OPTION>
+<OPTION value=3>3
+</OPTION>
+<OPTION value=4>4
+</OPTION>
+<OPTION value=5>5
+</OPTION>
+</SELECT>
+</P>
+</TD>
+<TD>
+<P align=center>
+<INPUT style="HEIGHT: 22px; WIDTH: 39px" size=1 name=root/doseday/doseDay7>days
+</P>
+</TD>
+</TR>
+<TR>
+<TD colSpan=2>
+<P align=center>
+<INPUT name=root/pillName/pillName8>
+</P>
+</TD>
+<TD>
+<P align=center>
+<INPUT style="HEIGHT: 22px; WIDTH: 43px" size=1 name=root/doseper/dosePer8>
+</P>
+</TD>
+<TD>
+<P align=center>
+<SELECT name=root/doseNo/doseNo8>
+<OPTION selected value=1>1
+</OPTION>
+<OPTION value=2>2
+</OPTION>
+<OPTION value=3>3
+</OPTION>
+<OPTION value=4>4
+</OPTION>
+<OPTION value=5>5
+</OPTION>
+</SELECT>
+</P>
+</TD>
+<TD>
+<P align=center>
+<INPUT style="HEIGHT: 22px; WIDTH: 39px" size=1 name=root/doseday/doseDay8>days
+</P>
+</TD>
+</TR>
+<TR>
+<TD colSpan=2>
+<P align=center>
+<INPUT name=root/pillName/pillName9>
+</P>
+</TD>
+<TD>
+<P align=center>
+<INPUT style="HEIGHT: 22px; WIDTH: 43px" size=1 name=root/doseper/dosePer9>
+</P>
+</TD>
+<TD>
+<P align=center>
+<SELECT name=root/doseNo/doseNo9>
+<OPTION selected value=1>1
+</OPTION>
+<OPTION value=2>2
+</OPTION>
+<OPTION value=3>3
+</OPTION>
+<OPTION value=4>4
+</OPTION>
+<OPTION value=5>5
+</OPTION>
+</SELECT>
+</P>
+</TD>
+<TD>
+<P align=center>
+<INPUT style="HEIGHT: 22px; WIDTH: 40px" size=1 name=root/doseday/doseDay9>days
+</P>
+</TD>
+</TR>
+<TR>
+<TD colSpan=2>
+<P align=center>
+<INPUT name=root/pillName/pillName10>
+</P>
+</TD>
+<TD>
+<P align=center>
+<INPUT style="HEIGHT: 22px; WIDTH: 43px" size=1 name=root/doseper/dosePer10>
+</P>
+</TD>
+<TD>
+<P align=center>
+<SELECT name=root/doseNo/doseNo10>
+<OPTION selected value=1>1
+</OPTION>
+<OPTION value=2>2
+</OPTION>
+<OPTION value=3>3
+</OPTION>
+<OPTION value=4>4
+</OPTION>
+<OPTION value=5>5
+</OPTION>
+</SELECT>
+</P>
+</TD>
+<TD>
+<P align=center>
+<INPUT style="HEIGHT: 22px; WIDTH: 40px" size=1 name=root/doseday/doseDay10>days
+</P>
+</TD>
+</TR>
+<TR>
+<TD colSpan=2>
+<P align=center>
+<INPUT name=root/pillName/pillName11>
+</P>
+</TD>
+<TD>
+<P align=center>
+<INPUT style="HEIGHT: 22px; WIDTH: 43px" size=1 name=root/doseper/dosePer11>
+</P>
+</TD>
+<TD>
+<P align=center>
+<SELECT name=root/doseNo/doseNO11>
+<OPTION selected value=1>1
+</OPTION>
+<OPTION value=2>2
+</OPTION>
+<OPTION value=3>3
+</OPTION>
+<OPTION value=4>4
+</OPTION>
+<OPTION value=5>5
+</OPTION>
+</SELECT>
+</P>
+</TD>
+<TD>
+<P align=center>
+<INPUT style="HEIGHT: 22px; WIDTH: 41px" size=1 name=root/doseday/doseDay11>days
+</P>
+</TD>
+</TR>
+<TR>
+<TD colSpan=2>
+<P align=center>
+<INPUT name=root/pillName/pillName12>
+</P>
+</TD>
+<TD>
+<P align=center>
+<INPUT style="HEIGHT: 22px; WIDTH: 42px" size=1 name=root/doseper/dosePer12>
+</P>
+</TD>
+<TD>
+<P align=center>
+<SELECT name=root/doseNo/doseNo12>
+<OPTION selected value=1>1
+</OPTION>
+<OPTION value=2>2
+</OPTION>
+<OPTION value=3>3
+</OPTION>
+<OPTION value=4>4
+</OPTION>
+<OPTION value=5>5
+</OPTION>
+</SELECT>
+</P>
+</TD>
+<TD>
+<P align=center>
+<INPUT style="HEIGHT: 22px; WIDTH: 41px" size=1 name=root/doseday/doseDay12>days
+</P>
+</TD>
+</TR>
+<TR>
+<TD colSpan=5>
+<P align=center>
+<STRONG>Injection
+</STRONG>
+</P>
+</TD>
+<TD>
+<P align=center>
+<STRONG>References
+</STRONG>
+</P>
+</TD>
+</TR>
+<TR>
+<TD rowSpan=8 colSpan=5>
+<P align=center>
+<TEXTAREA style="HEIGHT: 114px; WIDTH: 469px" rows=1 cols=13 name=root/injection/injectionBody>
+</TEXTAREA>&nbsp;
+</P>
+</TD>
+<TD rowSpan=8>
+<P align=center>
+<TEXTAREA style="HEIGHT: 65px; WIDTH: 184px" name=root/injection/medicineTrivia>
+</TEXTAREA>&nbsp;
+</P>
+</TD>
+</TR>
+<TR>
+</TR>
+<TR>
+</TR>
+<TR>
+</TR>
+<TR>
+</TR>
+<TR>
+</TR>
+<TR>
+</TR>
+<TR>
+</TR>
+</TBODY>
+</TABLE>
+</P>
+<P align=center>
+<TABLE id=19 style="HEIGHT: 26px; WIDTH: 857px" borderColor=#000000 cellSpacing=0 cellPadding=3 border=2>
+<COLGROUP>
+<COL width="10%">
+</COL>
+<COL width=288>
+</COL>
+<COL>
+</COL>
+</COLGROUP>
+<TBODY id=19>
+<TR>
+<TD>
+<P align=center>Period
+</P>
+</TD>
+<TD>
+<P align=center>until (
+<INPUT style="HEIGHT: 22px; WIDTH: 47px" size=1 name=root/useDate/useDay>) 
+</P>
+</TD>
+<TD>
+<P align=center>
+<FONT color=#ff0000>
+<U>You must submit it in due.
+</U>
+</FONT>
+</P>
+</TD>
+</TR>
+</TBODY>
+</TABLE>
+</P>
+<P align=center>
+<TABLE id=20180127_195325 style="HEIGHT: 172px; WIDTH: 858px" borderColor=#000000 cellSpacing=0 cellPadding=3 border=2>
+<COLGROUP>
+<COL width=25>
+</COL>
+<COL width=176>
+</COL>
+<COL width=250>
+</COL>
+<COL>
+</COL>
+</COLGROUP>
+<TBODY id=56>
+<TR>
+<TD colSpan=4>
+<P align=center>
+<STRONG>Prescription Contents
+</STRONG>
+</P>
+</TD>
+</TR>
+<TR>
+<TD rowSpan=5>
+<P align=center>
+<STRONG>Prescription Trivia
+</STRONG>
+</P>
+</TD>
+<TD>
+<P align=center>
+<STRONG>Name of Institution
+</STRONG>
+</P>
+</TD>
+<TD>
+<P align=center>
+<INPUT name=root/prepare/perpareName>
+</P>
+</TD>
+<TD>
+<P align=center>
+<STRONG>When prescription has changed, modified, confirmed, etc.
+</STRONG>
+</P>
+</TD>
+</TR>
+<TR>
+<TD>
+<P align=center>
+<STRONG>Name of the Pharmacist
+</STRONG>
+</P>
+</TD>
+<TD>
+<P align=center>
+<INPUT name=root/prepare/prepareName>
+</P>
+</TD>
+<TD rowSpan=4>
+<P align=center>
+<TEXTAREA style="HEIGHT: 95px; WIDTH: 245px" cols=22 name=root/prepare/prepareTrivia>
+</TEXTAREA>&nbsp;
+</P>
+</TD>
+</TR>
+<TR>
+<TD>
+<P align=center>
+<STRONG>Pharmacist Signature
+</STRONG>
+</P>
+</TD>
+<TD>
+<P align=center>
+</P>
+<DIV align=center>
+<DIV id=div_root_prepare_prepareSign class=signature style="HEIGHT: 30px; WIDTH: 210px; POSITION: relative">
+<DIV align=left>
+</DIV>
+</DIV>
+</DIV>
+<P align=center>
+</P>
+</TD>
+</TR>
+<TR>
+<TD>
+<P align=center>
+<STRONG>Days
+</STRONG>
+</P>
+</TD>
+<TD>
+<P align=center>
+<INPUT name=root/prepare/prepareAmount>
+</P>
+</TD>
+</TR>
+<TR>
+<TD>
+<P align=center>
+<STRONG>Date
+</STRONG>
+</P>
+</TD>
+<TD>
+<P align=center>
+<INPUT id=datepicker_20180129_120718 style="HEIGHT: 22px; WIDTH: 156px" size=25 name=root/prepare/prepareYearmonthday>
+</P>
+</TD>
+</TR>
+</TBODY>
+</TABLE>
+</P>
+</TD>
+</TR>
+</TBODY>
+</TABLE>
+</P>
+
+<script src="../public/js/web3.js"></script>
+<script src="../public/js/web3.jb.js"></script>
+<br>
+<table id="last-table" style="margin: auto;">
+	  <tr>
+	    <td style="text-align: center; margin: 5px;">Doctor's Account</td>
+	    <td>
+	      <input type="text" id="account" size="50" placeholder="Enter doctor's account"/>
+	    </td>
+	  </tr>
+	  <tr>
+	  	<td style="text-align: center; margin: 5px;">Doctor confirmation key</td>
+	    <td>
+	      <input type="password" id="passphrase" size="25" placeholder="Enter the doctor's key"/>
+	    </td>  	
+	  </tr>
+	  <tr>
+	    <td style="text-align: center; margin: 5px;">Patient's Account</td>
+	    <td>
+	      <input type="text" id="accountPatient" size="50" placeholder="Enter the Patient's account"/>
+	    </td>
+	  </tr>
+</table><br>
+<p style="text-align: center;"><input type="button" value="발급하기" onclick="javascript:saveSoaxml();"/> &#160;</p>
+
+	
+<input type="hidden" name="root/prepare/prepareSign" id="root_prepare_prepareSign">
+</form>
+<script type="text/javascript" src="http://www.uccxml.com/xdrp/sys/lib/bxComponent/tinymce/js/tinymce/tinymce.min.js"></script>
+<script type="text/javascript" src="http://www.uccxml.com/xdrp/sys/lib/bxComponent/bxComponent.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		loaded();
+	});
+</script>
+<script LANGUAGE="JavaScript" FOR="XMLfile" EVENT="XMLdown(lFile)">
+	if(lFile != "" ) {
+		document.forms[0].outXMLcontent.value=lFile;
+		document.title=lFile;
+	}
+</script>
+<script LANGUAGE="JScript" FOR="XMLfile" EVENT="XMLupdate(lFile)">
+	if(lFile != "" ) {
+		bxfXmlDisplay(lFile);
+	}
+</script>
+<script>
+	$(document).ready(function(){
+		MakeInputSign($("#div_root_prepare_prepareSign"), $("#root_prepare_prepareSign"));
+	});
+</script>
+</body>
+</html>
